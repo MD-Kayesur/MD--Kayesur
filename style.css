@@ -86,7 +86,7 @@ body{
     margin-top: -20px;
    }
    #container .it-me1 .it-me2  button{
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 10px 20px;
     border-radius: 10px;
     background-color: #b9b6b2;
@@ -103,6 +103,11 @@ body{
     height:200px;
      margin-left: -150px;
     margin-top: 30px;
+    border-radius: 10px;
+ }
+ #container .it-me1 img:hover{
+   transform: rotate(360deg);
+   transition: transform 4s;
  }
  /* section--3*/
  #about-me{
@@ -153,6 +158,8 @@ body{
  }
  #about-me   .about-me-full .about-me-left .row .about-me-left-down:hover{
     background-color: #d4f0e8;
+    transform: rotateY(360deg);
+    transition: transform 3s;
      
  }
  #about-me   .about-me-full .about-me-right{
@@ -181,6 +188,7 @@ body{
     color: white;
     background-color: #b6f3d6;
     box-shadow: 3px 3px 10px #18c077;
+   
  }
  /*---section--4-*/
  #service-me {
@@ -198,21 +206,26 @@ body{
     margin-top: 50px;
     text-align: center;
     margin-left:30px;
+   
+     
  }
  #service-me .service .services{
      padding: 20px;
      margin-left:50px;
      text-align: left;
-     width: 300px;
-     height: 200px;
+     width:300px;
+     height:200px;
      background-color: #d4f0e8;
      line-height: 30px;
      border-radius: 10px;
+    
+    
      
  }
  #service-me .service .services:hover{
 background-color: #ec8888;
 color: white;
+transform: translateY(-20px);
  }
  #service-me .service .services i{
     font-size: 40px;
@@ -242,14 +255,15 @@ color: white;
     margin-top: 50px;
     text-align: center;
     margin-left:30px;  
+     
  
  }
  #blog .my-blog .my-blogs{
     
      margin-left:50px;
      text-align: left;
-     width: 300px;
-     height: 340px;
+     width: 400px;
+     height:350px;
      background-color: #ece7e7af;
      line-height: 30px;
      border-radius: 10px;
@@ -262,7 +276,12 @@ color: white;
  #blog .my-blog .my-blogs img{
     width: 100%;
     height: 55%;
+    border-radius: 10px;
     
+ }
+ #blog .my-blog .my-blogs img:hover{
+   transform: rotateX( 60deg);
+   transition: transform 2s;
  }
  #blog .my-blog .my-blogs h1{
     margin-top:10px;
@@ -370,8 +389,37 @@ width: 130%;
 
  /* section---7 */
  #copyright{
-    text-align: center;
+    text-align: center; 
+    height: 500px; 
+    position: relative;
+    margin-top: 50px; 
+      justify-content: center;
+      align-items: center;
+  
+     
  }
+ #copyright::after{
+   content:" " ;
+   position:  absolute;
+   left:100px;
+   top: 0;
+   width: 100%;
+   height: 400px; 
+   background-image: url(pictures/bag-light-2.png) ;
+   animation: change 1s linear 1s infinite;
+ }
+ #copyright::before{
+   content:" " ;
+   position:  absolute;
+   left:100px;
+   top: 0;
+   width: 100%;
+   height: 400px;
+  
+   background-image: url(pictures/bag-light.png);
+   animation: changes 1s linear 1s infinite;
+ }
+  
  #copyright .link{
     font-size: 40px;
     
@@ -380,10 +428,35 @@ width: 130%;
     background-color: #705a47;
     border-radius: 50px;
     padding: 5px;
+    z-index:1;
  }
  #copyright h1{
     font-size: 50px;
  }
+ 
+ @keyframes change{
+   0%{
+opacity: 0;
+   }
+   50%{
+opacity: 1;
+   }
+   100%{
+opacity: 0;
+   }
+ }
+ @keyframes changes{
+   0%{
+opacity: 1;
+   }
+   50%{
+opacity: 0;
+   }
+   100%{
+opacity: 1;
+   }
+ }
+ 
 
  
  
